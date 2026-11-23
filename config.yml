@@ -1,0 +1,26 @@
+# 최상위로 백업할 페이지 (선택). 비워 두면 통합을 연결한 페이지를 자동으로 찾는다.
+# 연결했는데 백업에 나타나지 않는 페이지가 있을 때만 넣는다.
+roots:
+  # - https://www.notion.so/운영체제-1a2b3c4d5e6f...
+
+# 백업에서 뺀 페이지. 노션 페이지 링크나 ID를 넣는다.
+# 그 페이지의 하위 페이지도 함께 빠진다.
+exclude:
+  # - https://www.notion.so/개인메모-1a2b3c4d5e6f...
+
+# 대량 삭제 차단 기준
+safety:
+  max_delete_ratio: 0.3
+  min_delete_count: 5
+
+# 이 크기를 넘는 이미지는 받지 않는다
+images:
+  max_size_mb: 20
+
+# 데이터베이스 항목 파일 이름
+database_files:
+  # 항목 파일 이름 앞에 날짜를 붙여 파일 목록이 날짜순으로 정렬되게 한다. 예: 2024-01-10 1_10 일지.md
+  date_prefix: true
+  # 날짜 속성이 여러 개인 데이터베이스에서 쓸 속성. 기본은 이름이 '날짜'·'Date'·'일자'인 속성, 없으면 이름순 첫 날짜 속성
+  date_property:
+    # https://www.notion.so/강의-노트-1a2b3c4d5e6f...: 수업일
